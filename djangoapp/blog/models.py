@@ -1,8 +1,9 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse
+from django_summernote.models import AbstractAttachment
 from utils.rands import slugify_new
 from utils.images import resize_image
-from django_summernote.models import AbstractAttachment
 
 class PostAttachment(AbstractAttachment):
     def save(self, *args, **kwargs):
@@ -135,6 +136,11 @@ class Post(models.Model):
         default=None,
     )
     tags = models.ManyToManyField(Tag, blank=True, default='')
+
+    def get_absolute_url(self):
+        if not self.is_published:
+            return reverse('blog:index')
+        return reverse('blog:post', args=(self.slug,))
 
     def save(self, *args, **kwargs):
         if not self.slug:
