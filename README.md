@@ -1,3 +1,3 @@
 # 💻 Blog em Django
 
-Sistema de blog desenvolvido em Django.
+Sistema para criação de blogs desenvolvido em Django.
