@@ -1,4 +1,4 @@
-FROM python:3.11.3-alpine3.18
+FROM python:3.11.1-alpine3.18
 LABEL mantainer="https://github.com/gustavof04"
 
 ENV PYTHONDONTWRITEBYTECODE 1
