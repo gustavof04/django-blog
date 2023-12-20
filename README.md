@@ -11,10 +11,11 @@ Plataforma para criação de blogs desenvolvida em Django. O sistema e seu banco
 | Python  | 3.11.1 |
 | Django | 4.2.5 |
 | Docker | 24.0.5 |
+| Docker Desktop | 4.22.0 |
 | PostgreSQL | 13-alpine |
 
 ## ⚙️ Instruções para a virtualenv (opcional)
-A criação de uma virtualenv para o Django Blog é recomendada para evitar erros de importação apontados pela IDE que estiver utilizando. Entretanto, tais erros não afetam em nada na execução do projeto, pois a venv e suas dependências serão criadas e executadas em um ambiente Docker após o build de forma automática. Se não for seu caso, pule para o tópico <code>📂 Instruções para .env</code>.
+A criação de uma virtualenv para o Django Blog é recomendada para evitar erros de importação apontados pela IDE que estiver utilizando. Entretanto, tais erros não afetam em nada na execução do projeto, pois a venv e suas dependências serão criadas e executadas em um ambiente Docker após o build de forma automática. Se não for o seu caso, pule para o tópico <code>📂 Instruções para o .env</code>.
 
 * No terminal, navegue até a pasta raiz do projeto e execute o seguinte comando para criar um ambiente virtual:
   ```bash
@@ -23,12 +24,12 @@ A criação de uma virtualenv para o Django Blog é recomendada para evitar erro
 
 * Rode o comando de acordo com seu sistema para ativar seu ambiente virtual:
 
-  Windows
+  **Windows**
   ```bash
   .\nome_da_virtualenv\Scripts\activate
   ```
 
-  Linux ou macOS
+  **Linux ou macOS**
   ```bash
   source nome_da_virtualenv/bin/activate
   ```
@@ -67,9 +68,11 @@ A criação de uma virtualenv para o Django Blog é recomendada para evitar erro
   > **Obs.**: Diferente de outras variáveis, o valor de <code>SECRET_KEY</code> deve ser único e imprevisível. Como recomendação, gere uma chave secreta em https://djecrety.ir.
 
 ## 🐋 Instruções para o Docker
-* Com o Docker Desktop ativo e em segundo plano, certifique-se de não haver nenhum contêiner ou imagens em execução.
+* Baixe e instale o <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> caso não o tenha em sua máquina.
 
-* Ainda na pasta raíz do projeto (a que possui os arquivos Dockerfile e docker-compose.yml), execute o seguinte comando:
+* Com o Docker Desktop ativo e em segundo plano, certificando-se que não há nenhum contêiner ou imagens em execução.
+
+* Ainda na pasta raíz do projeto (a que possui os arquivos <code>Dockerfile</code> e <code>docker-compose.yml</code>), execute o seguinte comando:
   ```
   docker compose up --build
   ```
@@ -113,13 +116,15 @@ A criação de uma virtualenv para o Django Blog é recomendada para evitar erro
 
 6. Volte para http://127.0.0.1:8000 e veja as mudanças.
 
-Página inicial exibindo nosso post em um postcard            |  Página do post
+Página inicial exibindo nosso post em um card            |  Página do post
 :-------------------------:|:-------------------------:
 ![image](https://github.com/gustavof04/django-blog/assets/127045694/4495596a-8fac-422f-a9aa-6ab2d9353df7) | ![image](https://github.com/gustavof04/django-blog/assets/127045694/eb928ec0-eb42-4494-bbab-169fc8ba9bfc)
 
 </br>
 
+## 🎁 Bônus
+
 O Django Blog possui outras features para explorar, como:
- * **Tags** e **categorias** para os posts;
- * Model <code>Page</code> para criar uma página independente;
+ * Campos de **tags** e **categorias** para os posts;
  * Campo <code>MENU LINKS</code> em <code>Setup</code> para exibir um menu de atalhos no seu blog.
+ * Model <code>Page</code> para criar uma página independente;
