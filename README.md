@@ -122,7 +122,7 @@ Página inicial exibindo nosso post em um card            |  Página do post
 
 </br>
 
-## 🎁 Bônus
+## Bônus
 
 O Django Blog possui outras features para explorar, como:
  * Campos de **tags** e **categorias** para os posts;
