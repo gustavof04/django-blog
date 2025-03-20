@@ -127,4 +127,4 @@ Homepage displaying our post in a card            |  Post page
 The Django Blog has other features to explore, such as:
  * **Tags** and **categories** fields for posts;
  * <code>MENU LINKS</code> field in <code>Setup</code> to display a shortcut menu on your blog.
- * <code>Page</code> model to create an independent page."}
+ * <code>Page</code> model to create an independent page.
